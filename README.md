@@ -2,6 +2,7 @@
 copyleft lion137, https://lion137.blogspot.ie/
 
 C ++ wrapper for GMP library.    
+Compile with flag: -lgmp
 To use it put them two classes in PATH or current directory.   
 This repo contains class biginteger which under the hood uses GMP library.
 Overloaded operators: +=, -=, *=, /=, +, -, *, / - can be used also with integers and unsigned long long integers.    
