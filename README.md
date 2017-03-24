@@ -1,4 +1,6 @@
 # GMP_C
+copyleft lion137, https://lion137.blogspot.ie/
+
 C ++ wrapper for GMP library.    
 To use it put them two classes in PATH or current directory.   
 This repo contains class biginteger which under the hood uses GMP library.
