@@ -30,7 +30,7 @@ int main() {
 	
 	
 	biginteger x = biginteger(32);
-	biginteger v = biginteger("1", 10);
+	biginteger v = biginteger("1", 10)  ;
 	x.printbiginteger();
 	unsigned long long int y = 2;
 	unsigned long long int z = 7420;
