@@ -15,30 +15,4 @@ biginteger x = biginteger(<(string, base), int, unsigned long long int, signed i
 
 All overloaded opertors can be used like a normal expressions:    
 
-example program:
-
-
-#include<cstdlib>    
-#include<iostream>    
-#include<tuple>    
-#include<gmp.h>    
-#include "biginteger.h"    
-#include "biginteger.cc"    
-#include<algorithm>    
-#include<string>    
-int main() {
-	
-	
-	biginteger x = biginteger (32);
-	biginteger v = biginteger("1", 10)  ;
-	x.printbiginteger();
-	unsigned long long int y = 2;
-	unsigned long long int z = 7420;
-	printf("%d\n", isPrime(power(y, z) - v); //isPrime takes bigint or unsigned long long int
-	                                          // substraction works with unsigned long long int or biginteger
-	                                          // we print just an integer now
-	return 0;
-}
-
-
 Generally, after declaration we can use bigintegrs as a normal numbers with unsigned longs.
