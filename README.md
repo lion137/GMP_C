@@ -29,7 +29,7 @@ example program:
 int main() {
 	
 	
-	biginteger x = biginteger(32);
+	biginteger x = biginteger (32);
 	biginteger v = biginteger("1", 10)  ;
 	x.printbiginteger();
 	unsigned long long int y = 2;
