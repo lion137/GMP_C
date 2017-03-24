@@ -1,5 +1,6 @@
 # GMP_C
-C ++ wrapper for GMP library
+C ++ wrapper for GMP library.    
+To use it put them two classes in PATH or current directory.   
 This repo contains class biginteger which under the hood uses GMP library.
 Overloaded operators: +=, -=, *=, /=, +, -, *, / - can be used also with integers and unsigned long long integers.
 Boolean operators: < >, ==
