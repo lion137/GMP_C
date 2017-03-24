@@ -19,3 +19,8 @@ biginteger x = biginteger(<(string, base), int, unsigned long long int, signed i
 All overloaded opertors can be used like a normal expressions:    
 
 Generally, after declaration we can use bigintegrs as a normal numbers with unsigned longs.
+
+Compilation flags:
+- when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
+- main: g++ -Wall -std=c++11 main.cc -lgmp
+
