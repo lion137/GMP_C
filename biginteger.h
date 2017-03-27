@@ -263,5 +263,18 @@ biginteger mod(biginteger a, unsigned long long int b);
 		return rem;
 	}
 	
+	inline biginteger rootn_bigint(biginteger a, unsigned long long int n){ //returns truncated part of root degree n
+		mpz_t root;                               
+		mpz_init(root);
+		mpz_root(root, a.x, n);
+		return root;
+	}
+	inline biginteger rootn_bigint_rem(biginteger a, unsigned long long int n){ //returns remainder (like sqrt function)
+		mpz_t root, rem;                               
+		mpz_init(root);
+		mpz_init(rem);
+		mpz_rootrem(root, rem, a.x, n);
+		return rem;
+	}
 #endif
 

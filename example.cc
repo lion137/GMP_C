@@ -15,6 +15,7 @@ int main() {
 	x.printbiginteger();
 	unsigned long long int y = 2;
 	unsigned long long int z = 7420;
+	unsigned long long int n = 3;
 	printf("%d\n", isPrime(power(y, z) - v)); //isPrime takes bigint or unsigned long long int
 	                                          // substraction works with unsigned long long int or biginteger
 	                                          // we print just a integer now
@@ -33,6 +34,8 @@ int main() {
 	sqrt_bigint(v).printbiginteger();
 	printf("sqrt reminder from 10 = ");
 	sqrt_bigint_rem(v).printbiginteger();
+	printf("root reminder degree 3 from 33= ");
+	rootn_bigint_rem(biginteger("33", 10), n).printbiginteger();
 	
 	/*
 	 Outome:
@@ -45,6 +48,7 @@ int main() {
 6323103910516831208301947314...//very big number
  truncated sqrt from 10 = 3
 sqrt reminder from 10 = 1
+root reminder degree 3 from 33= 6
 	 *  */
 	 
 	return 0;
