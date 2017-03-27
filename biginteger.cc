@@ -94,6 +94,13 @@ biginteger& biginteger::operator /=(const biginteger& a){
 	mpz_tdiv_q(this->x, this->x, a.x);
 	return * this;
 } 
+
+//overloaded %= operator
+ biginteger& biginteger::operator %=(const biginteger& a){
+	 //Function: void mpz_mod (mpz_t r, const mpz_t n, const mpz_t d)
+	 mpz_mod(this->x, this->x, a.x);
+	 return * this;
+}
 biginteger biginteger::abs(){
 	biginteger tmp = biginteger(this->x);
 	mpz_abs (tmp.x, this->x);

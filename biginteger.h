@@ -42,6 +42,7 @@ biginteger& operator *= (const biginteger& a);
 biginteger& operator /= (const unsigned long long int& a);
 biginteger& operator /=(const signed long int& a);
 biginteger& operator /=(const biginteger& a);
+biginteger& operator %=(const biginteger& a);
 biginteger abs();
 biginteger power(unsigned long long int& a);
 biginteger mod(const biginteger& a);
@@ -167,6 +168,12 @@ biginteger mod(biginteger a, unsigned long long int b);
 		biginteger div = biginteger(b.x);
 		div /= a;
 		return div;
+	}
+	// % opertor
+	inline biginteger operator %(biginteger b, const biginteger& a){
+		biginteger md = biginteger(b.x);
+		md %= a;
+		return md;
 	}
 	// == methods
 	inline bool operator ==(const biginteger& b, const biginteger& a){
