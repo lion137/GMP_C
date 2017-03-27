@@ -5,7 +5,7 @@ C ++ wrapper for GMP library.
 Compile with flag: -lgmp
 To use it put them two classes in PATH or current directory.   
 This repo contains class biginteger which under the hood uses GMP library.
-Overloaded operators: +=, -=, *=, /=, +, -, *, /, - can be used also with integers and unsigned long long integers. 
+Overloaded operators: +=, -=, *=, /=, +, -, *, /, - can be used also with integers and unsigned long long integers.       
 %, %= - works with bigintegers only (so far)
 Boolean operators: < >, ==    
 Methods: abs(), power(unsigned long long int), mod - works with bigint and unsigned long long int.    
