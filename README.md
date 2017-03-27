@@ -11,7 +11,9 @@ Methods: abs(), power(unsigned long long int), mod - works with bigint and unsig
 
 Functions: usage: fun(args):    
 isPrime(<biginteger, unsigned long long int>)  - returns 0 if number is not prime, 1 if is probably prime and 2 if definitely prime.    
-power(x: unsigned long long int, y: unsigned long long int) returns biginteger x ^ y    
+power(x: unsigned long long int, y: unsigned long long int) returns biginteger x ^ y 
+sqrt_bigint(biginteger) - gives truncted part of sqrt
+sqra_bigint_rem(biginteger) - reminder from sqrt or zero if perfect square   
 
 Usage:
 biginteger x = biginteger(<(string, base), int, unsigned long long int, signed int>) // overloaded constructor    

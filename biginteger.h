@@ -244,8 +244,23 @@ biginteger mod(biginteger a, unsigned long long int b);
 	}
 	
 	
-int isPrime(biginteger a){
+    int isPrime(biginteger a){
 	return(mpz_probab_prime_p (a.x, 70));
+	}
+	
+	inline biginteger sqrt_bigint(biginteger a){ // returns truncated part of sqrt from biginteger
+		mpz_t tmp;
+		mpz_init(tmp);
+		mpz_sqrt(tmp, a.x);
+		return tmp;
+	}
+	
+	inline biginteger sqrt_bigint_rem(biginteger a){ //returns reminder after sqrt, ex: sqrt_bigint_rem(10) = 1
+		mpz_t tmp, rem;                               // zero of perfect square
+		mpz_init(tmp);
+		mpz_init(rem);
+		mpz_sqrtrem(tmp, rem, a.x);
+		return rem;
 	}
 	
 #endif
