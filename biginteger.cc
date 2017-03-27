@@ -1,13 +1,9 @@
 //biginteger.cc
 #include "biginteger.h"
-//#include "bigrational.h"
 #include <cstdlib>
 #include <iostream>
 #include <tuple>
 #include <gmp.h>
-// test git - comment
-//test git commnent2
-// test git new branch
 
 void biginteger::deleteBiginteger(){
 	std::cout << "sprzatam bigintegera"; std::cout << std::endl;
