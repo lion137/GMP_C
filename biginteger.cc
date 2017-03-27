@@ -5,6 +5,8 @@
 #include <iostream>
 #include <tuple>
 #include <gmp.h>
+// test git - comment
+//test git commnent2
 
 void biginteger::deleteBiginteger(){
 	std::cout << "sprzatam bigintegera"; std::cout << std::endl;
