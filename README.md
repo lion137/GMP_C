@@ -24,3 +24,4 @@ Compilation flags:
 - when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
 - main: g++ -Wall -std=c++11 main.cc -lgmp
 
+#end
