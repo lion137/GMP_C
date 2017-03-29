@@ -9,7 +9,7 @@
 #include <string>
 int main() {
 	
-	
+	char str1[10] = "123";
 	biginteger x = biginteger(32);
 	biginteger v = biginteger("10", 10);
 	x.printbiginteger();
@@ -35,7 +35,7 @@ int main() {
 	printf("sqrt reminder from 10 = ");
 	sqrt_bigint_rem(v).printbiginteger();
 	printf("root reminder degree 3 from 33= ");
-	rootn_bigint_rem(biginteger("33", 10), n).printbiginteger();
+	rootn_bigint_rem(biginteger(str1, 10), n).printbiginteger();
 	
 	/*
 	 Outome:

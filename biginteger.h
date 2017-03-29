@@ -45,6 +45,7 @@ biginteger& operator /=(const biginteger& a);
 biginteger& operator %=(const biginteger& a);
 biginteger abs();
 biginteger power(unsigned long long int& a);
+biginteger power(int& a);
 biginteger mod(const biginteger& a);
 biginteger mod(const unsigned long long int& a);
 

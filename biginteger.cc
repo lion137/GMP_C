@@ -111,6 +111,15 @@ biginteger biginteger::power(unsigned long long int& a){
 	mpz_pow_ui (tmp.x, this->x, a);
 	return tmp;
 }
+
+biginteger biginteger::power(int& a){
+	biginteger tmp = biginteger(this->x);
+	mpz_pow_ui (tmp.x, this->x, a);
+	return tmp;
+}
+
+
+
 biginteger biginteger::mod(const biginteger& a){
 	biginteger tmp = biginteger(this->x);
 	 mpz_mod (tmp.x, this->x, a.x);
