@@ -12,19 +12,19 @@
 		mpz_init(x);
 		mpz_set(x, n); 
 	}
-	biginteger(unsigned long long int a){
+	explicit biginteger(unsigned long long int a){
 		mpz_init(x);
 		mpz_set_ui(x, a);
 	}
-	biginteger(signed long int a){
+	explicit biginteger(signed long int a){
 		mpz_init(x);
 		mpz_set_si(x, a);
 	}
-	biginteger(int a){
+	explicit biginteger(int a){
 		mpz_init(x);
 		mpz_set_si(x, a);
 	}
-	biginteger(const char *str, int base){
+	explicit biginteger(const char *str, int base){
 		mpz_init_set_str(x, str, base);
 	}	
 	
