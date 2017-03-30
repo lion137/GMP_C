@@ -28,19 +28,24 @@ biginteger x = biginteger(<(* char, base), int, unsigned long long int, signed i
 
 All overloaded opertors can be used like a normal expressions:    
 
-Generally, after declaration we can use bigintegrs as a normal numbers with unsigned longs.
+Generally, after declaration we can use bigintegrs as a normal numbers with unsigned longs.    
 
-Compilation flags:
-- when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
-- main: g++ -Wall -std=c++11 main.cc -lgmp    
 For bigrationals:   
 
 Functions:    
 add(bigrational, bigrtional) - returns bigrational    
 substract(bigrational, bigrational) - returns bigrational    
 mult(bigrational, bigrational) - returns bigrtional    
-divide(bigrational, bigrational) - returns bigrational
-invert(bigrational) - returns inverted bigrational    		
+divide(bigrational, bigrational) - returns bigrational    
+invert(bigrational) - returns inverted bigrational    
+
+
+
+Compilation flags:
+- when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
+- main: g++ -Wall -std=c++11 main.cc -lgmp
+    
+    		
 
 
 #end
