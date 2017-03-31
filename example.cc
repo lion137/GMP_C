@@ -5,6 +5,8 @@
 #include <gmp.h>
 #include "biginteger.h"
 #include "biginteger.cc"
+#include "bigrational.cc"
+#include "bigrational.h"
 #include <algorithm>
 #include <string>
 int main() {
@@ -36,6 +38,9 @@ int main() {
 	sqrt_bigint_rem(v).printbiginteger();
 	printf("root reminder degree 3 from 33= ");
 	rootn_bigint_rem(biginteger(str1, 10), n).printbiginteger();
+	bigrational r1 = bigrational(3, 7);
+	r1.printbigrational();
+	invert(add(r1, r1)).printbigrational();
 	
 	/*
 	 Outome:
@@ -49,6 +54,9 @@ int main() {
  truncated sqrt from 10 = 3
 sqrt reminder from 10 = 1
 root reminder degree 3 from 33= 6
+3/7
+7/6
+
 	 *  */
 	 
 	return 0;
