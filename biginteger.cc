@@ -4,13 +4,13 @@
 #include <iostream>
 #include <tuple>
 #include <gmp.h>
+#include <limits.h>
 
 void biginteger::deleteBiginteger(){
-	std::cout << "sprzatam bigintegera"; std::cout << std::endl;
 	mpz_clear(x);
 }
 void biginteger::printbiginteger(){
-	gmp_printf("%Zd\n", this->x); //std::cout <<std::endl;
+	gmp_printf("%Zd\n", this->x); std::cout <<std::endl;
 }
 // overloaded += operators
 biginteger& biginteger::operator += (const unsigned long long int& a){
@@ -18,7 +18,7 @@ biginteger& biginteger::operator += (const unsigned long long int& a){
 	return *this;
 }
 biginteger& biginteger::operator += (const signed long int& a){
-	if (a < 0) {
+	if ((a < 0) && (a > LONG_MIN) ) {
 		signed long int tmp1 = -a;
 		unsigned long long int tmp2 = tmp1;
 		mpz_sub_ui(this->x, x, tmp2);
@@ -40,7 +40,7 @@ biginteger& biginteger::operator -= (const unsigned long long int& a){
 	return *this;
 }
 biginteger& biginteger::operator -= (const signed long int& a){
-	if (a < 0){
+	if ((a < 0) && (a > LONG_MIN) ){
 		signed long int tmp1 = -a;
 		unsigned long long int tmp2 = tmp1;
 		mpz_add_ui(this->x, x, tmp2);
