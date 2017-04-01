@@ -1,5 +1,4 @@
 -Wall
 a.out
 example
-tests
-tests.cc
+test*
