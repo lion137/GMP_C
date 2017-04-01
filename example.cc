@@ -1,4 +1,3 @@
-
 #include <cstdlib>
 #include <iostream>
 #include <tuple>
@@ -9,6 +8,7 @@
 #include "bigrational.h"
 #include <algorithm>
 #include <string>
+#include <climits>
 int main() {
 	
 	char str1[10] = "123";

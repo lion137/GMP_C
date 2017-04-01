@@ -5,7 +5,7 @@
 #include <iostream>
 #include <tuple>
 #include <gmp.h>
-#include <limits.h>
+#include <climits>
  class biginteger{
 	public:
 	mpz_t x;

@@ -4,7 +4,7 @@
 #include <iostream>
 #include <tuple>
 #include <gmp.h>
-#include <limits.h>
+#include <climits>
 
 void biginteger::deleteBiginteger(){
 	mpz_clear(x);
