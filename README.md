@@ -8,10 +8,10 @@ This repo contains classes biginteger and bigrational, which under the hood uses
 For bigintegers:    
 Overloaded operators: +=, -=, *=, /=, +, -, *, /, - can be used also with integers and unsigned long long integers.       
 %, %= - works with bigintegers only (so far)
-Boolean operators: < >, ==    
+Boolean operators: < >, == - works beetwen bigintegers, unsigned ong long and signed log integers.   
 Methods: abs(), power(unsigned long long int), mod - works with bigint and unsigned long long int.    
 
-Functions: usage: fun(args):    
+Functions:        
 isPrime(<biginteger, unsigned long long int>)  - returns 0 if number is not prime, 1 if is probably prime and 2 if definitely prime.    
 power(x: unsigned long long int, y: unsigned long long int) returns biginteger x ^ y 
 sqrt_bigint(biginteger) - gives truncted part of sqrt
