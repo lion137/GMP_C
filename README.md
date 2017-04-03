@@ -6,10 +6,16 @@ Compile with flag: -lgmp
 To use it put them two classes in PATH or current directory.   
 This repo contains classes biginteger and bigrational, which under the hood uses GMP library.    
 For bigintegers:    
-Overloaded operators: +=, -=, *=, /=, +, -, *, /, - can be used also with integers and unsigned long long integers.       
+Overloaded operators: +=, -=, *=, /=, +, -, *, /,  +, -, /, * - can be used also with integers and unsigned long long integers.       
 %, %= - works with bigintegers only (so far)
 Boolean operators: < >, == - works beetwen bigintegers, unsigned ong long and signed log integers.   
-Methods: abs(), power(unsigned long long int), mod - works with bigint and unsigned long long int.    
+Methods: abs(), power(unsigned long long int), mod - works with bigint and unsigned long long int. portand     
+
+Importand notice, due to effeciency and performance reasons implementation of +, -, * and / is based on +=, -=, *= and /=; so code:    
+
+z = x + y    
+set z as x + y, and also x is altered, after operation x is equal to x + y, so have this in mind when working with it.    
+It shouldnt be a big deal, cause, in general we are interested in the outcome of opertion.    
 
 Functions:        
 isPrime(<biginteger, unsigned long long int>)  - returns 0 if number is not prime, 1 if is probably prime and 2 if definitely prime.    
