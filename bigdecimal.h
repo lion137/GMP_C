@@ -46,6 +46,7 @@ class bigdecimal {
 	//print and delete:
 	void deleteBigdecimal();
 	void printbigdecimal(int num_digits);
+	~bigdecimal();
 	
 	//overloaded operators:
 	// += works for unsigned longs, ints, bigdecimal

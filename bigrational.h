@@ -44,6 +44,8 @@ bigrational(const char* str){
  	gmp_printf ("%#4Qd\n", x);
  }
  void deleteBigrational();
+ ~bigrational();
+ 
  bigrational add(bigrational a, bigrational b);
  bigrational substract(bigrational a, bigrational b);
  bigrational mult(bigrational a, bigrational b);

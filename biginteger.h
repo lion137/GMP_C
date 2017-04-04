@@ -31,6 +31,8 @@
 	
 void deleteBiginteger();
 void printbiginteger();
+~biginteger();
+
 biginteger& operator += (const unsigned long long int& a);
 biginteger& operator += (const signed long int& a);
 biginteger& operator += (const biginteger& a);

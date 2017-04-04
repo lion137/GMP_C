@@ -12,6 +12,10 @@ void biginteger::deleteBiginteger(){
 void biginteger::printbiginteger(){
 	gmp_printf("%Zd\n", this->x); std::cout <<std::endl;
 }
+
+biginteger::~biginteger(void){
+	mpz_clear(x);
+}
 // overloaded += operators
 biginteger& biginteger::operator += (const unsigned long long int& a){
 	mpz_add_ui(this->x, x, a);
@@ -131,9 +135,7 @@ biginteger biginteger::mod(const unsigned long long int& a){
 	 return tmp;
 }
 
-int nth_digit(const int& a){
-	
-}
+
 
 
  

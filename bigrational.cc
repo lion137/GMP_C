@@ -7,7 +7,10 @@
 
 void bigrational::deleteBigrational(){
 	mpq_clear(x);
+}
 	
+bigrational::~bigrational(void){
+	mpq_clear(x);
 }
 bigrational add(bigrational a, bigrational b){
 	mpq_t sum;

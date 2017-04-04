@@ -15,6 +15,11 @@ void bigdecimal::deleteBigdecimal(){
 	mpf_clear (x);
 }
 
+bigdecimal::~bigdecimal(void){
+	mpf_clear (x);
+	std::cout << "delete bigdecimal";std::cout <<std::endl;
+}
+
 // += operators:
 bigdecimal& bigdecimal::operator +=(const unsigned  long int& a){
 	 mpf_add_ui (this->x, x, a);

@@ -30,14 +30,14 @@ sqrt_bigint(biginteger) - gives truncted part of sqrt
 sqra_bigint_rem(biginteger) - reminder from sqrt or zero if perfect square       
 
 Usage:
-biginteger x = biginteger(<(* char, base), int, unsigned long long int, signed int>) // overloaded constructor    
+biginteger(or any other type) * x =new biginteger(<(* char, base), int, unsigned long long int, signed int>) // overloaded constructor    
+After finish computation with a pointer:    
+delete x
+x = NULL // freeing memory
 
-All overloaded opertors can be used like a normal expressions:    
-
-Generally, after declaration we can use bigintegrs as a normal numbers with unsigned longs.    
+All overloaded opertors can be used like a normal expressions:       
 
 For bigrationals:   
-
 Functions:    
 add(bigrational, bigrtional) - returns bigrational    
 substract(bigrational, bigrational) - returns bigrational    
@@ -45,14 +45,13 @@ mult(bigrational, bigrational) - returns bigrtional
 divide(bigrational, bigrational) - returns bigrational    
 invert(bigrational) - returns inverted bigrational    
 
-
+Bigdecimals during development.    
 
 Compilation flags:
 - when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
 - main: g++ -Wall -std=c++11 main.cc -lgmp    
 
-When we end computation, we should clear memory using delete methods.    
-For example: big1 - biginteger,   big1.deleteBiginteger();
+
     
     		
 
