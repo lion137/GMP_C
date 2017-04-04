@@ -43,7 +43,7 @@ bigrational(const char* str){
  void printbigrational(){
  	gmp_printf ("%#4Qd\n", x);
  }
- void delete_bigrational();
+ void deleteBigrational();
  bigrational add(bigrational a, bigrational b);
  bigrational substract(bigrational a, bigrational b);
  bigrational mult(bigrational a, bigrational b);

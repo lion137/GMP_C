@@ -44,7 +44,7 @@ class bigdecimal {
 		mpf_set_z(x, y.x);
 	}
 	//print and delete:
-	void deletebigdecimal();
+	void deleteBigdecimal();
 	void printbigdecimal(int num_digits);
 	
 	//overloaded operators:

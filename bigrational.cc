@@ -5,7 +5,7 @@
 #include <tuple>
 #include <gmp.h>
 
-void bigrational::delete_bigrational(){
+void bigrational::deleteBigrational(){
 	mpq_clear(x);
 	
 }

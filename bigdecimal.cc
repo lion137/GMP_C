@@ -11,7 +11,7 @@ void bigdecimal::printbigdecimal(int num_digits){
 	mpf_out_str(stdout, 10, num_digits, this ->x); std::cout <<std::endl;
 }
 
-void bigdecimal::deletebigdecimal(){
+void bigdecimal::deleteBigdecimal(){
 	mpf_clear (x);
 }
 
