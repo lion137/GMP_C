@@ -131,6 +131,10 @@ biginteger biginteger::mod(const unsigned long long int& a){
 	 return tmp;
 }
 
+int nth_digit(const int& a){
+	
+}
+
 
  
  

@@ -49,6 +49,7 @@ biginteger power(unsigned long long int& a);
 biginteger power(int& a);
 biginteger mod(const biginteger& a);
 biginteger mod(const unsigned long long int& a);
+int nth_digit(const int& a);
 
 char * mpz_get_str(char *str, int base, const mpz_t a);
 

@@ -49,7 +49,10 @@ invert(bigrational) - returns inverted bigrational
 
 Compilation flags:
 - when compiling files biginteger.cc and biginteger.h use flags: g++ -c -Wall  -std=c++11 -o %f -lgmp
-- main: g++ -Wall -std=c++11 main.cc -lgmp
+- main: g++ -Wall -std=c++11 main.cc -lgmp    
+
+When we end computation, we should clear memory using delete methods.    
+For example: big1 - biginteger,   big1.deleteBiginteger();
     
     		
 

@@ -15,6 +15,7 @@ void bigdecimal::deletebigdecimal(){
 	mpf_clear (x);
 }
 
+// += operators:
 bigdecimal& bigdecimal::operator +=(const unsigned  long int& a){
 	 mpf_add_ui (this->x, x, a);
 	 return *this;
@@ -36,6 +37,13 @@ bigdecimal& bigdecimal::operator +=(const int& a){
 
 bigdecimal& bigdecimal::operator += (const bigdecimal& a){
 	mpf_add(this->x, this->x, a.x);
+	return *this;
+}
+
+// -= operators:
+
+bigdecimal& bigdecimal::operator -= (const unsigned long int& a){
+	mpf_sub_ui (this->x, x, a);
 	return *this;
 }
 
