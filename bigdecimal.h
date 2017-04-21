@@ -12,8 +12,7 @@
 class bigdecimal {
 	public: mpf_t x;
 	
-	explicit bigdecimal(mpf_t y, mp_bitcnt_t prec){
-		 mpf_set_default_prec (prec);
+	explicit bigdecimal(mpf_t y){
 		 mpf_init_set (x, y);
 	}
 	
@@ -38,28 +37,97 @@ class bigdecimal {
 		mpf_init_set_d(x, y);
 	}
 	
-	explicit bigdecimal(biginteger y, mp_bitcnt_t prec){
-		mpf_set_default_prec (prec);
+	explicit bigdecimal(biginteger y){
 		mpf_init(x);
 		mpf_set_z(x, y.x);
 	}
 	//print and delete:
 	void deleteBigdecimal();
-	void printbigdecimal(int num_digits);
+	void printbigdecimal(int = 16);
 	~bigdecimal();
 	
 	//overloaded operators:
+    // unary operators:
+    // - 
+    bigdecimal& operator - () ;
+    
+    // = operator
+    void operator = (const bigdecimal& R ) { 
+         mpf_set(x, R.x);
+      }
+    
 	// += works for unsigned longs, ints, bigdecimal
 	
 	bigdecimal& operator += (const unsigned long  int& a);
 	bigdecimal& operator += (const int& a);
 	bigdecimal& operator += (const bigdecimal& a);
+	bigdecimal& operator += (const biginteger& a);
 	
 	// -= - unsigned longs, ints, bigdecimals
 	
 	bigdecimal& operator -= (const unsigned long int& a);
 	bigdecimal& operator -= (const int& a);
 	bigdecimal& operator -= (const bigdecimal& a);
+	bigdecimal& operator -= (const biginteger& a);
+	
+	// *= - unsigned longs, ints, bigdecimals, bigintegers
+	bigdecimal& operator *= (const unsigned long int& a); 
+	bigdecimal& operator *= (const int& a); 
+	bigdecimal& operator *= (const bigdecimal& a); 
+	bigdecimal& operator *= (const biginteger& a);
+	
+	// /= operators for unsigned longs, ints, bigdecimals, bigintegers:
+	bigdecimal& operator /= (const unsigned long int& a); 
+	bigdecimal& operator /= (const int& a); 
+	bigdecimal& operator /= (const bigdecimal& a); 
+	bigdecimal& operator /= (const biginteger& a);
+	
+	
+	 
 };
+
+
+// overloaded binary operators:
+
+// +
+
+inline bigdecimal operator +(bigdecimal lhs,  bigdecimal& rhs){
+	bigdecimal sum = bigdecimal(lhs.x);
+	sum += rhs;
+	return sum;
+}
+
+inline bigdecimal operator +(bigdecimal lhs, biginteger& rhs){
+	bigdecimal sum = bigdecimal(rhs);
+	sum += lhs;
+	return sum;
+}
+
+inline bigdecimal operator +(biginteger& lhs, bigdecimal rhs){
+	bigdecimal sum = bigdecimal(lhs);
+	sum += rhs;
+	return sum;
+}
+
+// - 
+
+inline bigdecimal operator -(bigdecimal lhs, bigdecimal& rhs){
+	bigdecimal sub = bigdecimal(lhs.x);
+	sub -= rhs;
+	return sub;
+}
+
+inline bigdecimal operator -(bigdecimal lhs, biginteger& rhs){
+	bigdecimal sub = bigdecimal(lhs.x);
+	bigdecimal sub1 = bigdecimal(rhs);
+	sub +=  -sub1;
+	return sub;
+}
+
+inline bigdecimal operator -(biginteger& lhs, bigdecimal rhs){
+	bigdecimal sub = bigdecimal(lhs.x);
+	sub += rhs;
+	return sub;
+}
 
 #endif

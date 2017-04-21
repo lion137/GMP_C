@@ -16,6 +16,15 @@ void biginteger::printbiginteger(){
 biginteger::~biginteger(void){
 	mpz_clear(x);
 }
+
+// unary opearors:
+// unary "-" :
+
+biginteger& biginteger::operator -(){
+	mpz_neg(this->x, this->x);
+	return *this;
+}
+
 // overloaded += operators
 biginteger& biginteger::operator += (const unsigned long long int& a){
 	mpz_add_ui(this->x, x, a);
