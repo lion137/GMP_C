@@ -29,12 +29,15 @@
 		mpz_init_set_str(x, str, base);
 	}	
 	
-void deleteBiginteger();
+void deleteBiginteger(){
+	mpz_clear(this->x);
+}
+
 void printbiginteger();
-~biginteger();
+//~biginteger();
 
  void operator = (const biginteger& R ) { 
-         mpz_set(x, R.x);
+         mpz_set(this->x, R.x);
       }
 
 biginteger& operator -() ;
@@ -63,7 +66,9 @@ char * mpz_get_str(char *str, int base, const mpz_t a);
 biginteger mod(biginteger a, biginteger b);
 biginteger mod(biginteger a, unsigned long long int b);
 
-		};
+};
+
+
 		// + and - methods
 	inline biginteger operator +(biginteger lhs, const biginteger&  rhs){
 		biginteger sum = biginteger(lhs.x);

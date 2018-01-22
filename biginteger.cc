@@ -6,16 +6,15 @@
 #include <gmp.h>
 #include <climits>
 
-void biginteger::deleteBiginteger(){
-	mpz_clear(x);
-}
+
+
 void biginteger::printbiginteger(){
 	gmp_printf("%Zd\n", this->x); std::cout <<std::endl;
 }
 
-biginteger::~biginteger(void){
-	mpz_clear(x);
-}
+/*biginteger::~biginteger(void){
+	mpz_clear(this->x);
+}*/
 
 // unary opearors:
 // unary "-" :
