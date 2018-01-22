@@ -32,8 +32,10 @@ sqra_bigint_rem(biginteger) - reminder from sqrt or zero if perfect square
 Usage:
 biginteger(or any other type) * x =new biginteger(<(* char, base), int, unsigned long long int, signed int>) // overloaded constructor    
 After finish computation with a pointer:    
-delete x
-x = NULL // freeing memory
+
+x->deleteBiginteger();     
+delete x;     
+x = NULL;     
 
 All overloaded opertors can be used like a normal expressions:       
 
